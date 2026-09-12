@@ -12,42 +12,53 @@
 
 <body class="bg-[#E6E6E6]">
 
-    <div class="mt-9 ml-16">
+    <div class="mt-32 ml-16">
 
         <img
             src="{{ my_profile.photo.url }}"
             alt="{{ my_profile.name }}"
-            class="h-24 w-24 rounded-full object-cover"
+            class="h-36 w-36 rounded-full object-cover"
         >
 
         <div class="mt-6 text-7xl font-bold">
             {{ my_profile.name }}
         </div>
-
-        <div class="mt-40">
+             
+        <div class="m-4 text-2xl">
             <span>{{ my_profile.location }}</span>
-            <span>Bhopal</span>
+            <span class="ml-8">Bhopal</span>
         </div>
-
-        <div class="mt-8">
-
-            <div class="text-xl italic">
+           <div class="text-xl italic w-64 ">
                 {{ my_profile.tagline }}
             </div>
 
-            <input id="q"
-                type="text"
-                placeholder="What's on your mind?"
-                class="mt-6 rounded-lg border px-4 py-3"
-            >
+           <div class="mt-6 flex items-stretch border-amber-500">
+               <input
+                    name="q"
+                     type="text"
+                      placeholder="Send an Anonymous Message"
+                         class="h-12 w-96 rounded-l-lg border  px-4 py-3"
+                               />
 
-        </div>
-
-    </div>
+    <button
+        type="submit"
+        class="h-12 rounded-r-lg bg-[#BC8A1C] px-5 text-white hover:opacity-50 font-bold hover:cursor-pointer"
+        onclick="alert('Button Clicked')"
+    >
+        Send
+    </button>
+                                                   </div>
 
     <!-- cards -->
     <div>
+
+
+
+
     </div>
+{% load django_browser_reload %}
+
+{% django_browser_reload_script %}
 
 </body>
 
